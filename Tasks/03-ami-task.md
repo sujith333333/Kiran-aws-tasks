@@ -26,6 +26,7 @@ Step 1: Create and Configure an EC2 Instance
    - Choose the **Amazon Linux 2 AMI**.
    - Select an instance type (e.g., `t2.micro` for the free tier).
    - Click "Next: Configure Instance Details."
+   ![preview](./Images/ami-1.png)
 
 3. **Configure Instance Details:**
    - Leave default settings or customize as needed.
@@ -46,6 +47,8 @@ Step 1: Create and Configure an EC2 Instance
      - Type: **HTTP**, Protocol: **TCP**, Port Range: **80**, Source: **Anywhere** (for web access).
      - Type: **Custom TCP**, Protocol: **TCP**, Port Range: **5000**, Source: **Anywhere** (for Flask app access).
    - Click "Review and Launch."
+   ![preview](./Images/ami-2.png)
+   ![preview](./Images/ami-3.png)
 
 7. **Review and Launch:**
    - Review your configurations and click "Launch."
@@ -99,11 +102,13 @@ Step 5: Run the Application
 
 1. **Start the Flask Application:**
    python3 app.py
+   ![preview](./Images/ami-4.png)
    
 
 2. **Access Your Application:**
    - Open a web browser and navigate to `http://your-instance-public-dns:5000`.
    - You should see the current server time displayed.
+   ![preview](./Images/ami-5.png)
 
 Step 6: Create a Custom AMI
 
@@ -115,9 +120,11 @@ Step 6: Create a Custom AMI
    - Right-click on your stopped instance, select "Image," and then "Create Image."
    - Name it (e.g., `FlaskAppAMI`), and fill in any details.
    - Click "Create Image."
+   ![preview](./Images/ami-6.png)
 
 3. **Launch New Instances from Your AMI:**
    - You can now launch new EC2 instances using this custom AMI, which includes your pre-configured Flask application.
+   ![preview](./Images/ami-7.png)
 
 Step 7: Cleanup
 
